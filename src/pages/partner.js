@@ -5,11 +5,13 @@ import TabbedComponent from "../components/partner/PartnerTabs"
 
 export function Partner() {
     return (
-       <div>
+       <div className="p-home">
         <Navbar />
         <Hero/>
+        <div className="partner-home">
         <PartnerHeader/>
         <TabbedComponent/>
+        </div>
        </div>
     )
 }

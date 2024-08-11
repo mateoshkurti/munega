@@ -8,7 +8,7 @@ const TabbedComponent = () => {
   };
 
   return (
-    <div className="tabbed-container">
+    <div className="tabbed-container max-w-[1640px] mx-auto p-4">
       <div className="tabbed-header">
         <div
           className={`tab ${activeTab === 'services' ? 'active' : ''}`}
@@ -21,6 +21,12 @@ const TabbedComponent = () => {
           onClick={() => handleTabClick('staff')}
         >
           Staff
+        </div>
+        <div
+          className={`tab ${activeTab === 'gallery' ? 'active' : ''}`}
+          onClick={() => handleTabClick('gallery')}
+        >
+          Gallery
         </div>
       </div>
       <div className="tabbed-content">
@@ -42,6 +48,17 @@ const TabbedComponent = () => {
               <li>John Doe - Senior Stylist</li>
               <li>Jane Smith - Makeup Artist</li>
               <li>Michael Johnson - Hair Stylist</li>
+              {/* Replace with actual data */}
+            </ul>
+          </div>
+        )}
+         {activeTab === 'gallery' && (
+          <div>
+            <h2>Gallery</h2>
+            <ul>
+              <li>Photo1</li>
+              <li>Photo2</li>
+              <li>Photo3</li>
               {/* Replace with actual data */}
             </ul>
           </div>

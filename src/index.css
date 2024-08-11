@@ -8,30 +8,36 @@
     @apply border border-black rounded-xl px-5 py-1
   }
 }
-
+ .p-home{
+  padding-left: 1%;
+  padding-right: 1%;
+ }
 
 .business-header {
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
+  overflow: hidden;  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
+
+
 .business-info {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 20px;
 }
 
-.business-details {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+
+.booking-details{
+  width: calc(33.3333333333334% - 16px);
 }
 
 .name-bio {
   margin-bottom: 10px;
+  width: calc(66.66666666666667% - 16px);
+  display: flex;
+  flex-direction: row;
 }
 
 .name-bio h2 {
@@ -39,25 +45,92 @@
   margin-bottom: 5px;
   font-size: 20px;
 }
-
-.name-bio .bio {
-  margin-top: 0;
-  color: #666;
-  font-size: 14px;
+.p-name{
+  font-weight: bold;
+}
+.p-bio{
+  font-size: 15px;
+  color: #555;
 }
 
+.name-bio img {
+  margin-top: 5px;
+  border-radius: 50%;
+  height: 76px;
+  width: 76px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.p-book{
+  border-radius: 500px;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  width: 100%;
+  justify-content: center;
+  justify-self: center;
+  
+}
 .details p {
   margin: 0;
   line-height: 1.4;
 }
 
-.map-container {
-  width: 70%;
+.map {
+  width: calc(66.66666666666667% - 16px);
   height: 150px; /* Adjust height as needed */
-  border-left: 1px solid #ccc;
-  margin-left: 20px;
+  margin-top: 15px;
+  border: solid thin black;
+  border-right: none;
+}
+.location-info{
+  border: solid thin black;
+  height: 150px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  width: calc(33.3333333333334% - 16px);
+  border-left: none;
+  box-sizing: border-box;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
+.location-cont{
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid thin rgb(214, 214, 214);
+  height:50%;
+  align-items: center;
+  text-align: center;
+  padding-top: 12px;
+  border-left: none;
+  border-bottom-width: 1px;
+  justify-content: center;
+}
+.location-icon{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.hours{
+  border-top: solid thin rgb(214, 214, 214);
+  height: 50%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 12px;
+  border-left: none;
+  display: flex;
+  flex-direction: row;
+}
+.hours-icon{
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .map-container iframe {
   width: 100%;
   height: 100%;
@@ -67,12 +140,13 @@
 
 /* CSS for TabbedComponent */
 .tabbed-container {
-  max-width: 600px;
   margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-grow: 2;
+  width: calc(100% - 30px);
 }
 
 .tabbed-header {
